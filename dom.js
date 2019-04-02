@@ -1,9 +1,9 @@
 
+const audio= document.querySelectorAll('.piano_song audio')
+const buttons = document.querySelectorAll('.piano_song button')
 
-let piano = document.getElementById('pushA');
-
-function playAudio(event) { 
-   piano.play(); 
- //  console.log('HELLOW')
-  } 
-piano.addEventListener('click', playAudio);
+for(let i=0; i< buttons.length; i++ ){
+  buttons[i].addEventListener('click', function(){
+      audio[i].play();
+    })
+  }
